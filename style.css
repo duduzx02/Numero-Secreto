@@ -6,4 +6,15 @@
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Heebo', sans-serif;
+}
+
+:root{
+  --bg-color: #000000;
+  --primary-color: #31E1F7;
+}
+
+body{
+  background-color: var(--bg-color);
+  color: #31E1F7;
 }
