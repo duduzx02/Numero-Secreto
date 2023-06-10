@@ -26,6 +26,16 @@ body{
   gap: 1rem;
 }
 
+.body{
+  background-color: blueviolet;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 h1{
   font-size: 6rem;
 }
@@ -44,4 +54,9 @@ h3{
   font-size: 3rem;
   padding: 10px 25px;
   margin: 15px;
+}
+
+.invalido{
+  color: red;
+  font-size: 2rem;
 }
