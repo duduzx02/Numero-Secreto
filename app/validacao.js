@@ -4,10 +4,12 @@ function verificaOresultadoValido(chute) {
 
   if (chuteForInvalido(numero)) {
     elementoChute.innerHTML = '<div class="invalido">Valor inválido</div>';
+    return
   }
 
   if (numeroForMaiorOuMenorQueOValorPermitido(numero)) {
     elementoChute.innerHTML = `<div class="invalido"> Valor inválido: o número secreto precisa estar entre ${menorValor} e ${maiorValor}</div>` 
+    return
   }
 
   if (numero === numeroSecreto){
@@ -17,6 +19,10 @@ function verificaOresultadoValido(chute) {
       <h2>O número secreto era ${numeroSecreto}</h2>
       </div>
     `
+  } else if(numero < numeroSecreto){
+    elementoChute.innerHTML += `<div>O número secreto é maior <i class="ph ph-arrow-up"></i></div>`
+  } else {
+    elementoChute.innerHTML += `<div>O número secreto é menor <i class="ph ph-arrow-down"></i></div>`
   }
 }
 
