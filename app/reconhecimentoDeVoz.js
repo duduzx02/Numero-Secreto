@@ -7,5 +7,10 @@ recognition.start();
 recognition.addEventListener('result', onSpeak)
 
 function onSpeak(e){
-  console.log(e.results[0][0].transcript)
+  const result = e.results[0][0].transcript
+  const box = document.querySelector('#chute')
+  box.innerHTML = `
+  <div>Você disse:</div>
+  <span class="box">${result}</span>
+  `
 }
